@@ -25,12 +25,24 @@ tags:
 - Data Aggregation
 - CFPB 1033
 created: '2026-07-23'
-modified: '2026-07-23'
+modified: '2026-07-23T12:00:00Z'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/becu-domain-security.yml
 - type: Website
   url: https://www.becu.org/
+- type: Login
+  url: https://onlinebanking.becu.org/BECUBankingWeb/Login.aspx
+- type: PrivacyPolicy
+  url: https://www.becu.org/online-privacy-notice
+- type: TermsOfService
+  url: https://www.becu.org/website-terms-of-use
+- type: Support
+  url: https://www.becu.org/support/contact-us
+- type: Blog
+  url: https://www.becu.org/blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
