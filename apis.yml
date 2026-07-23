@@ -1,0 +1,36 @@
+aid: becu
+url: https://raw.githubusercontent.com/api-evangelist/becu/refs/heads/main/apis.yml
+name: BECU
+kind: company
+description: BECU (Boeing Employees' Credit Union) is a member-owned, not-for-profit
+  state-chartered credit union founded in 1935 and headquartered in Tukwila, Washington
+  (NMLS ID 490518). Originally serving Boeing employees, it is today one of the largest
+  credit unions in the United States, offering consumer and business deposit accounts,
+  lending, mortgages, and investment services across the Pacific Northwest and nationally
+  through digital channels. Like the vast majority of US credit unions, BECU exposes
+  no public first-party developer API or developer portal; its digital banking runs
+  on established core and fintech vendors (FIS, LPL/Client Point, ICE/Ellie Mae for
+  mortgage), and consumer-permissioned data access for third-party fintech apps is
+  intermediated through data aggregators rather than a documented, self-serve BECU
+  API. US open finance is voluntary and fragmented, and no mandated open-banking API
+  contract applies here; the CFPB Section 1033 Personal Financial Data Rights rule
+  is the emerging framework that will shape BECU's future data-access posture.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Credit Union
+- Open Finance
+- Data Aggregation
+- CFPB 1033
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.becu.org/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

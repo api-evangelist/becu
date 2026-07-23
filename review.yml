@@ -1,0 +1,90 @@
+aid: becu
+name: BECU
+review:
+  question: Does BECU expose a public first-party developer API, downloadable API specifications, or a documented FDX / CFPB 1033 data-access API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    BECU (Boeing Employees' Credit Union), a member-owned not-for-profit
+    state-chartered credit union founded in 1935 and headquartered in
+    Tukwila, Washington (NMLS ID 490518), publishes NO public developer
+    portal and NO first-party developer API. No downloadable OpenAPI or
+    Swagger specification was found, so none was harvested. There is no
+    documented FDX (Financial Data Exchange) participation or first-party
+    FDX-conformant data-access API, and no published CFPB Section 1033
+    Personal Financial Data Rights posture. This is the honest and typical
+    reality for a US credit union: US open finance is voluntary and
+    fragmented, with no mandated open-banking contract. Consumer-permissioned
+    data access to BECU accounts for third-party fintech apps is
+    intermediated through data aggregators (Plaid / MX / Finicity / Akoya)
+    rather than a self-serve BECU API. BECU's digital banking is delivered
+    via established core and fintech vendors (FIS / Client Point, LPL
+    Account View, ICE/Ellie Mae for mortgage), observed on its public site.
+  portalProbes:
+    - host: developer.becu.org
+      result: NXDOMAIN
+      note: Does not resolve; no DNS record. No public developer portal at the canonical developer subdomain.
+    - host: developers.becu.org
+      result: connection reset
+      note: Resolves to F5 Distributed Cloud (ves.io) infrastructure but resets TLS with no public content.
+    - host: apis.becu.org
+      result: connection reset
+      note: Resolves to F5 Distributed Cloud infrastructure but resets TLS with no public content.
+    - host: api.becu.org
+      httpStatus: 403
+      note: F5 Distributed Cloud gateway host; gated internal/partner API gateway, not a documented public developer API.
+    - url: https://www.becu.org/api-developer
+      httpStatus: 404
+      note: No developer/API landing page on the main website.
+    - url: https://www.becu.org/
+      httpStatus: 200
+      note: Public marketing/banking website; no developer, API, open-banking, FDX, or aggregator developer resources advertised.
+  authModel:
+    documented: false
+    note: No public API means no publicly documented authentication model (no OAuth2/OIDC, API key, or mTLS developer flow is published).
+  specProvenance:
+    openapiHarvested: false
+    note: No publicly downloadable OpenAPI/Swagger specification exists to harvest.
+  openFinancePosture:
+    firstPartyApi: false
+    developerPortal: false
+    fdxParticipant: unknown-undocumented
+    cfpb1033Posture: unpublished
+    aggregatorAccess: true
+    note: |
+      Third-party data access is aggregator-mediated (Plaid / MX / Finicity /
+      Akoya) rather than a first-party BECU API. FDX participation is not
+      publicly documented; CFPB Section 1033 is the emerging framework
+      expected to shape future data-access, but BECU has no published 1033
+      data-access API or posture statement as of the review date.
+  commonLinkVerification:
+    - type: Website
+      url: https://www.becu.org/
+      httpStatus: 200
+      included: true
+    - type: LinkedIn
+      url: https://www.linkedin.com/company/becu
+      httpStatus: 999
+      included: false
+      note: LinkedIn anti-bot response (999); content not verifiable, so excluded to avoid unverified links.
+    - type: GitHubOrganization
+      url: https://github.com/becu
+      httpStatus: 200
+      included: false
+      note: github.com/becu is an empty personal account with no repos and no identifying info; not confirmably BECU, so excluded.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API is documented for BECU.
+sources:
+  - url: https://www.becu.org/
+    type: Website
+    note: Confirms BECU identity (member-owned not-for-profit credit union, Boeing origin, founded 1935); no developer/API resources.
+  - url: https://www.becu.org/about-us
+    type: Website
+    note: Confirms founding year 1935, NMLS ID 490518; references FIS Global (Client Point), LPL Account View, Ellie Mae as digital vendors.
+  - url: https://api.becu.org/
+    type: Probe
+    note: HTTP 403 from an F5 Distributed Cloud gateway; gated, not a public developer API.
