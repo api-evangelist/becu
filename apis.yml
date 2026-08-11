@@ -15,6 +15,17 @@ description: BECU (Boeing Employees' Credit Union) is a member-owned, not-for-pr
   API. US open finance is voluntary and fragmented, and no mandated open-banking API
   contract applies here; the CFPB Section 1033 Personal Financial Data Rights rule
   is the emerging framework that will shape BECU's future data-access posture.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-11'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial Services
