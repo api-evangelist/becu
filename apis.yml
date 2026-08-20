@@ -28,6 +28,14 @@ deliveryModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- United States
+- Credit Union
+- Open Finance
+- Data Aggregation
+- CFPB 1033
+tags_raw:
 - Financial Services
 - Banking
 - United States
