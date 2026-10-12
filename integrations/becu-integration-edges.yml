@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/becu/integrations
+- https://n8n.io/integrations/becu/
+- https://composio.dev/toolkits/becu
+- https://monid.ai/tools/becu
+checked:
+- https://composio.dev/toolkits/becu
+- https://monid.ai/tools/becu
+- https://n8n.io/integrations/becu/
+- https://zapier.com/apps/becu/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
