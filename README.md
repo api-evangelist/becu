@@ -1,4 +1,4 @@
-# BECU (becu)
+# BECU
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,45 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-BECU (Boeing Employees' Credit Union) is a member-owned, not-for-profit state-chartered credit union founded in 1935 and headquartered in Tukwila, Washington (NMLS ID 490518). Originally serving Boeing employees, it is today one of the largest credit unions in the United States, offering consumer and business deposit accounts, lending, mortgages, and investment services.
+BECU (Boeing Employees' Credit Union) is a member-owned, not-for-profit state-chartered credit union founded in 1935 and headquartered in Tukwila, Washington (NMLS ID 490518). Originally serving Boeing employees, it is today one of the largest credit unions in the United States, offering consumer and business deposit accounts, lending, mortgages, and investment services across the Pacific Northwest and nationally through digital channels. Like the vast majority of US credit unions, BECU exposes no public first-party developer API or developer portal; its digital banking runs on established core and fintech vendors (FIS, LPL/Client Point, ICE/Ellie Mae for mortgage), and consumer-permissioned data access for third-party fintech apps is intermediated through data aggregators rather than a documented, self-serve BECU API. US open finance is voluntary and fragmented, and no mandated open-banking API contract applies here; the CFPB Section 1033 Personal Financial Data Rights rule is the emerging framework that will shape BECU's future data-access posture.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/becu/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/becu/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Credit Union · Open Finance · CFPB 1033
 
-## Open Finance / API Posture
+## BECU on APIs.io
 
-BECU exposes **no public first-party developer API and no public developer portal**. Probes of the usual developer hostnames confirmed this:
+Everything profiled for BECU is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/becu/](https://apis.io/providers/becu/)** — or go straight to one of the APIs or properties below.
 
-- `developer.becu.org` — does not resolve (no DNS record)
-- `developers.becu.org` / `apis.becu.org` — resolve to F5 Distributed Cloud infrastructure but reset the connection with no public TLS content
-- `api.becu.org` — an F5 Distributed Cloud gateway host returning HTTP 403 (gated internal/partner gateway, not a documented public API)
-- `www.becu.org/api-developer` — HTTP 404
+### Published properties
 
-This is the honest and typical reality for a US credit union. US open finance is **voluntary and fragmented** — there is no single mandated open-banking contract. BECU's digital banking runs on established core and fintech vendors (FIS / Client Point, LPL Account View, ICE/Ellie Mae for mortgage), and consumer-permissioned data sharing for third-party fintech apps is intermediated through **data aggregators** (Plaid / MX / Finicity / Akoya) rather than a self-serve BECU API. The emerging **CFPB Section 1033** Personal Financial Data Rights rule is the framework expected to shape BECU's future data-access posture; no first-party 1033 or FDX data-access API is publicly documented at this time.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (1)
 
-- Financial Services
-- Banking
-- United States
-- Credit Union
-- Open Finance
-- Data Aggregation
-- CFPB 1033
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [Becu Domain Security](https://apis.io/security/becu/becu-domain-security/)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+## Where to find this API
 
-## APIs
-
-No public developer APIs are documented. See the Open Finance / API Posture section above.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.becu.org/)
+- [Support](https://www.becu.org/support/contact-us)
+- [Blog](https://www.becu.org/blog)
+- [Terms of service](https://www.becu.org/website-terms-of-use)
+- [Privacy policy](https://www.becu.org/online-privacy-notice)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 10.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/becu/](https://apis.io/providers/becu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for BECU: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/becu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
